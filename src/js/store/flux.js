@@ -66,7 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				if (!favoritoExistente) {
 					setStore({ favoritos: [...favoritos, { id, name, type }] });
 				} else {
-					console.warn(`El favorito con ID ${id} ya está en la lista.`);
+					console.warn(`El favorito con ID ${id} ya está en la lista.`); //Esta es una función de la consola del navegador que muestra un mensaje de advertencia. 
 				}
 
 
