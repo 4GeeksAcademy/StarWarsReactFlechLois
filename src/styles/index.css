@@ -1,3 +1,155 @@
-/* 
-    General Styles
-*/
+/* Estilos generales para todo el documento */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 1px;
+    margin: 0px;
+    background-color: #fccb7d;
+}
+
+/* Estilos específicos para la barra de navegación */
+
+.navbar {
+    /* Aplica un fondo degradado */
+    background-image: linear-gradient(to bottom, #8c4c0c, #fccb7d); /* Gradiente de arriba hacia abajo */
+    /* Fallback para navegadores que no soportan gradientes */
+    background-color: #8c4c0c; /* Color de fondo base */
+    /* Otros estilos */
+    padding: 10px;
+    margin: 5px;
+}
+
+.startWars {
+    width: 80px; /* Tamaño del ícono */
+    height: 80px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    color: #ffe81f; /* NO CAMBIA Cambia el color de la imagen del ícono a amarillo */
+}
+/* Estilos para el botón del dropdown */
+.dropdown .btn-secondary {
+    background-color: black; /* Color de fondo base */
+    color: #fccb7d; /* Color del texto */
+    padding: 10px 20px; /* Padding para dar espacio al contenido del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Cambia el color de fondo cuando el cursor pasa por encima del botón del dropdown */
+.dropdown .btn-secondary:hover {
+    background-color: #fccb7d; /* Color de fondo al pasar el cursor */
+    color: black; /* Color del texto */
+}
+
+/* Estilos para el dropdown-menu */
+.dropdown-menu {
+    background-image: linear-gradient(to bottom, #8c4c0c, #fccb7d); /* Fondo amarillo */
+    border: none; /* Sin borde */
+    right: 0; /* Ajusta la posición a la derecha según sea necesario */
+}
+
+/* Alinear el botón a la derecha dentro del dropdown-item */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem; /* Ajusta el espacio a la derecha según sea necesario */
+}
+
+/* Estilo para el ícono de papelera */
+.bi-trash {
+    margin-left: auto; /* Alineará el ícono completamente a la derecha */
+}
+
+.dropdown-item .bi-trash {
+    margin-right: 2px; /* Ajustar el margen izquierdo según sea necesario */
+}
+
+/* Estilos para el contenedor principal de detalles */
+.contenedorDetalles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para las tarjetas de detalle */
+.detallesCardSingle {
+    background-color:#8c4c0c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Estilos para el contenedor de imágenes */
+.imagenDetalles {
+    width: 100%; /* Aseguro que el contenedor de imágenes ocupe el ancho completo de su contenedor principal. */
+    height: 500px;/* Fijo la altura específica para el contenedor de imágenes*/
+    overflow: hidden;/* Oculta cualquier parte de la imagen que se desborde del contenedor. */
+    display: flex;/* centro vertical y horizontalmente la imagen */
+    justify-content: center;/*  */
+    align-items: center;/*  */
+}
+
+.detalleImagen { /*  */
+    width: auto;/* Ajusto automáticamente el ancho de la imagen para mantener su relación de aspecto disponible en el contenedor */
+    height: 100%;/* ocupa toda la altura disponible en el contenedor */
+    object-fit: contain;/* Ajusto la imagen dentro de su contenedor sin distorsionarla */
+    max-width: 100%;/* Asegura que la imagen no se desborde del contenedor */
+    max-height: 100%;/* Asegura que la imagen no se desborde del contenedor  */
+    border: 2px solid #090909fa; /* Borde blanco de 2px alrededor del contenedor de imágenes */
+    border-radius: 5px; /* Bordes redondeados para suavizar los bordes del contenedor */
+}
+
+/* Estilos para la información detallada */
+.infoDetallada {
+    padding: 20px;
+    color: #fff;
+}
+
+.infoDetallada h2 {
+    margin-top: 0;
+}
+
+.infoDetallada p {
+    margin: 5px 0;
+}
+
+img.detalleImagen { /*La imagen tenga margen arriba*/
+    margin-top: 10%;
+}
+
+.card{ /*card de cardInfo.jsx */
+    background-color:#fb7a24
+}
+
+/*Scroll de los contenedores donde se ubican las cards*/
+
+.scroll-container { /*  overflow-x: scroll para habilitar el desplazamiento horizontal.*/
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.scroll-container > * { /*  Define la apariencia de la barra de desplazamiento en navegadores basados en WebKit.*/
+    flex: 0 0 auto;  /* Evita que los elementos hijos se reduzcan o crezcan de su tamaño base. Auto: Es decir, cada tarjeta tendrá un tamaño fijo basado en su contenido.*/
+    margin-right: 10px; /* Añade un margen derecho a cada hijo para espaciar las tarjetas */
+}
+
+
+.scroll-container::-webkit-scrollbar { /*  Define la apariencia de la barra de desplazamiento en navegadores basados en WebKit.*/
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb { /*   Thumb: Estiliza el pulgar de la barra de desplazamiento (la parte que el usuario arrastra).*/
+    background: #5a2c35; /* Color del pulgar */
+    border-radius: 5px; /* Bordes redondeados del pulgar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover { /*  Define la apariencia de la barra de desplazamiento en navegadores basados en WebKit.*/
+    background: #5e262c; /* Color del pulgar cuando el usuario pasa el ratón sobre él */
+}
